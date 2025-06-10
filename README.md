@@ -1,2 +1,2 @@
 ## Visualizando projeto
-    https://etec-animacoes.vercel.app/
+    (https://etec-animacoes.vercel.app/)
