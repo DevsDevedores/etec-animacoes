@@ -1,2 +1,2 @@
 ## Visualizando projeto
-    https://etec-discografia-bob-marley.vercel.app/
+    https://etec-animacoes.vercel.app/
