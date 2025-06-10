@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --cor-principal: ;
+
+    --cor-verde: #018a2c;
+    --cor-amarelo: #fcde02;
+    --cor-vermelho: #db0a13;
+
+    --cor-branco: #f5f5f5;
+    --cor-preto: #212121;
+    --fonte-padrao: "Ubuntu", sans-serif;
+
+
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    background: linear-gradient(-90deg, #000 0%, #000 40%, #212121 100%)
+}
+
+.capa {
+    display: flex;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.capa__titulo {
+    font-size: 4rem;
+    width: 40vw;
+    margin: calc(10vh) 0 calc(25vh) 10vw;
+
+    animation: entrada-esquerda 3s ease-in-out;
+}
+
+.capa__imagem {
+    object-fit:contain;
+    max-width: 40vw;
+    max-height: 40vw;
+    border: 3px solid var(#000);
+    animation: fade-in 6s ease-in-out;
+}
+
+.seta-dupla {
+    position: absolute;
+    bottom: 1rem;
+    right: 50%;
+
+    height: 4rem;
+
+    animation: flutuar 2s ease-in-out infinite;
+}
+
+.discografia {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem 2rem 2rem;
+
+    flex-direction: column;
+    gap: 40px;
+}
+
+.discografia__disco {
+    width: 90vw;
+    height: 30vw;
+    /* background-color: coral; */
+    display: flex;
+    gap: 80px;
+
+    animation: teste;
+    animation: anima-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+}
+
+.discografia__disco:hover > p {
+    animation: disco-historia 5s ease-in-out;
+    display: block;
+}
+
+.discografia__disco > p {
+    margin: 1rem;
+    width: 80%;
+    font-size: 24px;
+    display: none;
+}
+
+.discografia__disco img {
+    max-width: 30vw;
+}
+
+.discografia__disco img :hover {
+    max-width: 98%;
+}
+
+.rodape {
+    height: 4rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-branco);
+}
+
+.rodape a {
+    color: var(--cor-branco);
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(0, -10px);
+    }
+}
+
+@keyframes entrada-esquerda {
+    0% {
+        opacity: 0;
+        transform: translateX(-120px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disco-historia {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+        }   
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes anima-scroll {
+    0% {
+opacity: 0;
+transform: translateX(-150px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+    
+}
+
